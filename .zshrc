@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:~/.bin:~/.composer/vendor/bin:$PATH
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.bin:$HOME/.composer/vendor/bin:$PATH
 
 # Init ZSH
 export ZSH=~/.oh-my-zsh
@@ -85,6 +85,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias brewup='brew update; brew upgrade; brew cask upgrade; brew prune; brew cleanup; brew doctor; composer global update; npm update -g'
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias where=which # sometimes i forget
+alias brwe=brew  #typos
+alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
+alias ll='ls -lah'
 
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
