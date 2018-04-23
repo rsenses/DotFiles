@@ -87,7 +87,8 @@ source $ZSH/oh-my-zsh.sh
 alias brewup='brew update; brew upgrade; brew cask upgrade; brew prune; brew cleanup; brew doctor; composer global update; npm update -g'
 
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /Users/rsilva/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
