@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.bin:$HOME/.composer/vendor/bin:$PATH
+export PATH=$PATH:/usr/local/bin:/usr/local/sbin:$HOME/.bin:$HOME/.composer/vendor/bin
 
 # Init ZSH
 export ZSH=~/.oh-my-zsh
@@ -97,7 +97,6 @@ alias ll='ls -lah'
 
 source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
 
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
