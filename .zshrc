@@ -9,9 +9,9 @@ export ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
 [[ -s ${ZIM_HOME}/init.zsh ]] && source ${ZIM_HOME}/init.zsh
 
 # Plugins
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
+#source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Aliases
 alias brewup='brew update; brew upgrade; brew cask upgrade; brew prune; brew cleanup; brew doctor; composer global update; npm update -g; zmanage update'
@@ -30,6 +30,7 @@ export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="/usr/local/opt/php@7.1/bin:$PATH"
 export PATH="/usr/local/opt/php@7.1/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # XDebug vs-code
-export XDEBUG_CONFIG="idekey=VSCODE"export PATH="/usr/local/sbin:$PATH"
+export XDEBUG_CONFIG="idekey=VSCODE"
