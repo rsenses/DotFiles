@@ -17,7 +17,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias where=which # sometimes i forget
 alias brwe=brew  #typos
-alias hosts='sudo $EDITOR /etc/hosts'   # yes I occasionally 127.0.0.1 twitter.com ;)
 alias ll='ls -lah'
 
 # Paths
