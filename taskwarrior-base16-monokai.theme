@@ -1,0 +1,83 @@
+# Colores con el tema monokai en la terminal
+# color0 -> Transparente
+# color1 -> Rosa
+# color2 -> Verde claro
+# color3 -> Verde Pistacho
+# color4 -> Naranja
+# color5 -> Lila
+# color6 -> Azul cielo
+# color7 -> Blanco
+# color8 -> Gris
+# color9 -> color1
+# color10 -> color2
+# color11 -> color3
+# color12 -> color4
+# color13 -> color5
+# color14 -> color6
+# color15 -> color7
+# color16 -> Negro
+# color17 -> Azul Oscuro
+# color18 -> Azul Marino
+# color19 -> Azul
+# color20 -> Azul
+# ... hasta color27 todo azules
+# color28 -> Verde
+# color29 -> Verde Azulado
+# color30 -> Azul turquesa
+# color31 -> Azul  claro
+##################################################
+
+color=on
+fontunderline=off
+
+color.active=bold green
+color.alternate=
+
+color.blocking=white
+color.blocked=white on color8
+
+color.burndown.done=color0 on color4
+color.burndown.pending=color0 on color1
+color.burndown.started=color0 on color9
+
+color.calendar.due=color0 on color9
+color.calendar.due.today=color0 on color1
+color.calendar.holiday=color0 on color3
+color.calendar.overdue=color0 on color5
+color.calendar.today=color0 on color4
+color.calendar.weekend=on color0
+color.calendar.weeknumber=color4
+
+color.error=color6
+color.debug=color6
+color.due=yellow
+color.due.today=red
+color.overdue=inverse
+color.scheduled=color4
+color.footnote=color6
+color.header=color4
+
+color.history.add=color0 on color1
+color.history.delete=color0 on color3
+color.history.done=color0 on color10
+
+color.uda.priority.H=bold white
+color.uda.priority.M=white
+color.uda.priority.L=color8
+color.uda.priority.=color31
+
+color.project.none=
+color.recurring=
+
+color.summary.background=on color0
+color.summary.bar=color0 on color6
+
+color.sync.added=
+color.sync.changed=
+color.sync.rejected=color1
+
+color.tag.none=color31
+color.tagged=color3
+
+color.undo.after=color2
+color.undo.before=color1

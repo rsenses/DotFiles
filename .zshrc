@@ -18,6 +18,7 @@ alias .....="cd ../../../.."
 alias where=which # sometimes i forget
 alias brwe=brew  #typos
 alias ll='ls -lah'
+alias hosts='code /etc/hosts'
 
 # Paths
 export PATH="/usr/local/opt/gpg-agent/bin:$PATH"
@@ -28,3 +29,4 @@ export PATH="/usr/local/sbin:$PATH"
 
 # XDebug vs-code
 export XDEBUG_CONFIG="idekey=VSCODE"
+export PATH="/usr/local/opt/curl/bin:$PATH"
