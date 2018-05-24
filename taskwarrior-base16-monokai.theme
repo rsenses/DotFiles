@@ -28,7 +28,8 @@
 ##################################################
 
 color=on
-fontunderline=off
+
+rule.precedence.color=deleted,completed,active,keyword.,tag.,project.,overdue,scheduled,due.today,due,blocked,blocking,recurring,uda.,tagged
 
 color.blocking=white
 color.blocked=white on color8
@@ -52,7 +53,7 @@ color.error=color6
 color.debug=color6
 color.due=color2
 color.due.today=color1
-color.scheduled=color5
+color.scheduled=color3
 color.overdue=color7 on color1
 color.footnote=color6
 color.header=color8
