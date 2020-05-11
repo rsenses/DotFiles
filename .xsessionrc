@@ -1,0 +1,11 @@
+# My default editor is nano. I don't even able to find exit button in vim :D
+export EDITOR='vim'
+
+# Para que las aplicaciones QT tengan estilos GTK
+export QT_QPA_PLATFORMTHEME=gtk2
+
+# Si la pongo en .profile no funcionan en tint2
+# Make ~/.executor folder executable
+export PATH="${PATH}:$HOME/.executor"
+
+exec openbox-session
