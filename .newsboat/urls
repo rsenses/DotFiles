@@ -1,0 +1,6 @@
+"query:Unread Articles:unread = \"yes\""
+# https://hnrss.org/frontpage?points=25 dev
+# http://feeds.weblogssl.com/espinof movies
+# https://lobste.rs/rss dev
+# "query:dev Articles:tags # \"dev\""
+# "query:movies Articles:tags # \"movies\""

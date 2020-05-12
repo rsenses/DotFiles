@@ -1,0 +1,9 @@
+article-sort-order	date-asc
+refresh-on-startup	yes
+show-read-feeds  	no
+prepopulate-query-feeds	yes
+urls-source "ocnews"
+ocnews-url "https://rsenses.allsync.com"
+ocnews-login "rsenses"
+ocnews-password 
+ocnews-flag-star "s"

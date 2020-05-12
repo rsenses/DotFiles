@@ -219,6 +219,12 @@
         <command>rofi -run-command "zsh -c -i '{cmd}'" -show drun</command>
       </action>
     </keybind>
+    <keybind key="Super-p">
+      <action name="Execute">
+        <name>rofi</name>
+        <command>rofi -modi "pass:rofi-pass" -show pass</command>
+      </action>
+    </keybind>
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
         <to>right</to>
@@ -737,7 +743,7 @@
       <desktop>1</desktop>
       <maximized>true</maximized>
     </application>
-    <application name="rxvt" class="URxvt">
+    <application name="urxvt" class="URxvt">
       <desktop>2</desktop>
       <!-- <maximized>true</maximized> -->
     </application>
