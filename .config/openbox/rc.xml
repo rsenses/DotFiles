@@ -221,8 +221,8 @@
     </keybind>
     <keybind key="Super-p">
       <action name="Execute">
-        <name>rofi</name>
-        <command>rofi -modi "pass:rofi-pass" -show pass</command>
+        <name>Pass</name>
+        <command>zsh -c -i 'rofi-pass'</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">
