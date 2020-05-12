@@ -187,6 +187,15 @@
         <wrap>no</wrap>
       </action>
     </keybind>
+    <keybind key="W-x">
+      <startupnotify>
+          <enabled>false</enabled>
+          <name>Logout</name>
+      </startupnotify>
+      <action name="Execute">
+        <command>obsession-logout</command>
+      </action>
+    </keybind>
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
         <command>xbacklight +10</command>
@@ -212,17 +221,23 @@
         <command>sh -c "pactl set-sink-mute 0 true ; pactl set-sink-volume 0 0%"</command>
       </action>
     </keybind>
-    <keybind key="Super-space">
+    <keybind key="W-space">
       <action name="Execute">
         <name>rofi</name>
         <!-- <command>rofi -modi "run,clipboard:greenclip print,window,ssh" -show run -font "Roboto 12" -terminal urxvt</command> -->
         <command>rofi -run-command "zsh -c -i '{cmd}'" -show drun</command>
       </action>
     </keybind>
-    <keybind key="Super-p">
+    <keybind key="W-p">
       <action name="Execute">
         <name>Pass</name>
         <command>zsh -c -i 'rofi-pass'</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-t">
+      <action name="Execute">
+        <name>Urxvt</name>
+        <command>urxvt</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">
