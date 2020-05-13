@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>x-terminal-emulator</execute>
+			</action>
+		</item>
+		<item label="Web browser">
+			<action name="Execute">
+				<execute>x-www-browser</execute>
+			</action>
+		</item>
+		<!-- This requires the presence of the 'openbox-menu' package to work -->
+		<item label="Archivos">
+			<action name="Execute">
+				<execute>pcmanfm-qt</execute>
+			</action>
+		</item>
+		<menu id="root-menu-463717" label="Applications">
+			<item label="VLC">
+				<action name="Execute">
+					<execute>vlc</execute>
+				</action>
+			</item>
+			<item label="Timeshift">
+				<action name="Execute">
+					<execute>timeshift-launcher</execute>
+				</action>
+			</item>
+			<item label="Synaptic">
+				<action name="Execute">
+					<execute>synaptic-pkexec</execute>
+				</action>
+			</item>
+			<item label="Transmission">
+				<action name="Execute">
+					<execute>transmission-gtk</execute>
+				</action>
+			</item>
+			<item label="OnlyOffice">
+				<action name="Execute">
+					<execute>/var/lib/flatpak/exports/bin/org.onlyoffice.desktopeditors</execute>
+				</action>
+			</item>
+			<item label="Postman">
+				<action name="Execute">
+					<execute>/var/lib/flatpak/exports/bin/com.getpostman.Postman</execute>
+				</action>
+			</item>
+			<item label="Spotify">
+				<action name="Execute">
+					<execute>/var/lib/flatpak/exports/bin/com.spotify.Client</execute>
+				</action>
+			</item>
+			<item label="Thunderbird">
+				<action name="Execute">
+					<execute>thunderbird</execute>
+				</action>
+			</item>
+			<item label="Telegram">
+				<action name="Execute">
+					<execute>telegram-desktop</execute>
+				</action>
+			</item>
+			<item label="Discord">
+				<action name="Execute">
+					<execute>/var/lib/flatpak/exports/bin/com.discordapp.Discord</execute>
+				</action>
+			</item>
+			<item label="FileZilla">
+				<action name="Execute">
+					<execute>filezilla</execute>
+				</action>
+			</item>
+			<item label="Visual Studio Code">
+				<action name="Execute">
+					<execute>code</execute>
+				</action>
+			</item>
+		</menu>
+		<menu execute="/usr/bin/obamenu" id="applications-menu" label="Applications"/>
+		<separator/>
+		<item label="ObConf">
+			<action name="Execute">
+				<execute>obconf</execute>
+			</action>
+		</item>
+		<item label="Reconfigure">
+			<action name="Reconfigure"/>
+		</item>
+		<item label="Restart">
+			<action name="Restart"/>
+		</item>
+		<separator/>
+		<item label="Exit">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>

@@ -25,6 +25,9 @@ xscreensaver -no-splash &
 ## I love my wife! Upss typo, I mean wifi
 (sleep 5; nm-applet) &
 
+## Dunst notifications
+dunst &
+
 ## Bluetooth system tray
 #(sleep 3; blueberry-tray) &
 
