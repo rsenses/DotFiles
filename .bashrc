@@ -18,9 +18,9 @@ HISTFILESIZE=2000
 
 # Open zsh by defaut
 # Switch to ZSH shell
-if test -t 1; then
-	exec zsh
-fi
+#if test -t 1; then
+#	exec zsh
+#fi
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
@@ -117,4 +117,12 @@ fi
 
 if [[ ${HOME}/.profile ]]; then
     source $HOME/.profile
+fi
+
+if [[ $- == *i* ]]
+then
+    bind 'TAB:menu-complete'
+    bind 'set show-all-if-ambiguous on'
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
 fi
