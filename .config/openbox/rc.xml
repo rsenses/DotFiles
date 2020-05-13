@@ -208,17 +208,17 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5%"</command>
+        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5% ; volume status"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5%"</command>
+        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5% ; volume status"</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>sh -c "pactl set-sink-mute 0 true ; pactl set-sink-volume 0 0%"</command>
+        <command>sh -c "pactl set-sink-mute 0 true ; pactl set-sink-volume 0 0% ; volume status"</command>
       </action>
     </keybind>
     <keybind key="W-space">
@@ -325,9 +325,9 @@
       </action>
     </keybind>
     <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-Print">
+    <keybind key="A-XF86Eject">
       <action name="Execute">
-        <command>scrot -s</command>
+        <command>scrot -s ~/Imágenes/screenshots/%b%d-%H%M%S.png</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
@@ -386,9 +386,9 @@
       </action>
     </keybind>
     <!-- Launch scrot when Print is pressed -->
-    <keybind key="Print">
+    <keybind key="XF86Eject">
       <action name="Execute">
-        <command>scrot</command>
+        <command>scrot ~/Imágenes/screenshots/%b%d-%H%M%S.png</command>
       </action>
     </keybind>
   </keyboard>

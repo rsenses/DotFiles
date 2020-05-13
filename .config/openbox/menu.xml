@@ -6,7 +6,7 @@
 				<execute>x-terminal-emulator</execute>
 			</action>
 		</item>
-		<item label="Web browser">
+		<item label="Firefox">
 			<action name="Execute">
 				<execute>x-www-browser</execute>
 			</action>
