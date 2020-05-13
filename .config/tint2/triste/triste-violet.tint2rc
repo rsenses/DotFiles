@@ -242,7 +242,7 @@ clock_dwheel_command =
 # Battery
 battery_hide = never
 battery_low_status = 10
-battery_low_cmd = notify-send "battery low"
+battery_low_cmd = notify-send "battery low" -u critical
 battery_full_cmd = 
 bat1_font = Roboto 8
 bat2_font = Roboto 8
