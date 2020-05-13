@@ -1,11 +1,11 @@
 [urgency_low]
-    background = "#282a36"
-    foreground = "#f8f8f2"
+    background = "#8be9fd"
+    foreground = "#282a36"
     timeout = 10
 
 [urgency_normal]
-    background = "#282a36"
-    foreground = "#f8f8f2"
+    background = "#8be9fd"
+    foreground = "#282a36"
     timeout = 10
 
 [urgency_critical]
@@ -54,7 +54,7 @@
     padding = 8                 # Padding between text and separator
     horizontal_padding = 8      # Horizontal padding
     separator_color = frame     # Color for separator: auto/foreground/frame/X color
-    icon_position = left        # Align icons left/right/off
+    icon_position = off        # Align icons left/right/off
 
     idle_threshold = 120        # Don't remove messages if the user is idle (no mouse or keyboard input) for longer than idle_threshold seconds
     sticky_history = yes        # Make notifications remain until clicked on (yes) or timeout as normal (no) when recalled from history
