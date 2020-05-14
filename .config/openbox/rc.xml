@@ -810,6 +810,10 @@
       <desktop>4</desktop>
       <maximized>true</maximized>
     </application>
+    <application name="Sequeler" class="Sequeler">
+      <desktop>4</desktop>
+      <maximized>true</maximized>
+    </application>
     <application name="postman" class="Postman">
       <desktop>4</desktop>
       <maximized>true</maximized>

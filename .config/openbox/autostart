@@ -20,7 +20,7 @@ nitrogen --restore &
 #xsettingsd &
 
 ## Start powersettings
-/usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
+#/usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
 xfce4-power-manager &
 
 ## I love my wife! Upss typo, I mean wifi
