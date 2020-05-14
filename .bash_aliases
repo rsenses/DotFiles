@@ -10,11 +10,15 @@ alias myip='curl ipinfo.io/ip'
 alias email='neomutt'
 
 # Por seguridad
-alias mv='mv -i'
 alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+alias df='df -h' # human-readable sizes
 
 # CD
 alias ..='cd ..'
+alias ...='cd ../..'
 
 # Colores
 alias grep='grep --color=auto'

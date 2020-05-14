@@ -189,8 +189,8 @@
     </keybind>
     <keybind key="W-x">
       <startupnotify>
-          <enabled>false</enabled>
-          <name>Logout</name>
+        <enabled>false</enabled>
+        <name>Logout</name>
       </startupnotify>
       <action name="Execute">
         <command>obsession-logout</command>
@@ -234,10 +234,46 @@
         <command>zsh -c -i 'rofi-pass'</command>
       </action>
     </keybind>
-    <keybind key="C-A-t">
+    <keybind key="W-Return">
       <action name="Execute">
         <name>Urxvt</name>
         <command>urxvt</command>
+      </action>
+    </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Firefox</name>
+        </startupnotify>
+        <command>firefox-esr</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>PCManFM</name>
+        </startupnotify>
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
+    <keybind key="C-S-q">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>xkill</name>
+        </startupnotify>
+        <command>xkill</command>
+      </action>
+    </keybind>
+    <keybind key="W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>pavucontrol</name>
+        </startupnotify>
+        <command>pavucontrol</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">

@@ -1,5 +1,5 @@
 ## Para autentificar apps
-lxqt-policykit-agent &
+lxpolkit &
 
 ## Inicia compton
 compton &
@@ -19,11 +19,12 @@ nitrogen --restore &
 ## Some of my apps don't respect fontconfig, I'm using xsettingsd to fix it :)
 #xsettingsd &
 
-## Start xscreensaver
-xscreensaver -no-splash &
+## Start powersettings
+/usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
+xfce4-power-manager &
 
 ## I love my wife! Upss typo, I mean wifi
-(sleep 5; nm-applet) &
+connman-gtk &
 
 ## Dunst notifications
 dunst &

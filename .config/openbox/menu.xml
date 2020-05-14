@@ -12,9 +12,9 @@
 			</action>
 		</item>
 		<!-- This requires the presence of the 'openbox-menu' package to work -->
-		<item label="Archivos">
+		<item label="File Browser">
 			<action name="Execute">
-				<execute>pcmanfm-qt</execute>
+				<execute>pcmanfm</execute>
 			</action>
 		</item>
 		<menu id="root-menu-463717" label="Applications">
@@ -79,13 +79,29 @@
 				</action>
 			</item>
 		</menu>
-		<menu execute="/usr/bin/obamenu" id="applications-menu" label="Applications"/>
+		<menu id="root-menu-951945" label="Settings">
+			<item label="Power Manager">
+				<action name="Execute">
+					<execute>xfce4-power-manager-settings</execute>
+				</action>
+			</item>
+			<item label="Appearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+			<item label="ObConf">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<item label="ObMenu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+		</menu>
 		<separator/>
-		<item label="ObConf">
-			<action name="Execute">
-				<execute>obconf</execute>
-			</action>
-		</item>
 		<item label="Reconfigure">
 			<action name="Reconfigure"/>
 		</item>
