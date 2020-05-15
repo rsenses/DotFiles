@@ -1,5 +1,7 @@
 # My default editor is nano. I don't even able to find exit button in vim :D
 export EDITOR='code'
+export TERMINAL='urxvt'
+export BORWSER='firefox-esr'
 
 # Para que las aplicaciones QT tengan estilos GTK
 export QT_QPA_PLATFORMTHEME=gtk2

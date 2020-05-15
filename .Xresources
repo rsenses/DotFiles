@@ -17,10 +17,8 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-rofi.modi:	drun,clipboard:greenclip print,run,ssh
-rofi.terminal:             qterminal
-rofi.ssh-client:           ssh
-rofi.ssh-command:          {terminal} -e {ssh-client} {host}
+rofi.modi:	drun,clipboard:greenclip print,run
+rofi.terminal:             urxvt
 rofi.run-command:          {cmd}
 rofi.run-shell-command:    {terminal} -e {cmd}
 rofi.disable-history:      false
