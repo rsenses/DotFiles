@@ -180,100 +180,107 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <!-- Keybindings for Tilling -->
+    <keybind key="W-Right">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>-0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Left">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>50%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Up">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-Down">
+      <action name="Unmaximize" />
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>-0</y>
+        <width>100%</width>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="W-k">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <keybind key="W-j">
+      <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="W-q">
+      <action name="Close"/>
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="W-5">
+      <action name="GoToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-1">
+      <action name="SendToDesktop">
+        <to>1</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop">
+        <to>2</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop">
+        <to>3</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop">
+        <to>4</to>
+      </action>
+    </keybind>
+    <keybind key="W-S-5">
+      <action name="SendToDesktop">
+        <to>5</to>
+      </action>
+    </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
         <wrap>no</wrap>
-      </action>
-    </keybind>
-    <keybind key="W-x">
-      <startupnotify>
-        <enabled>false</enabled>
-        <name>Logout</name>
-      </startupnotify>
-      <action name="Execute">
-        <command>obsession-logout</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessUp">
-      <action name="Execute">
-        <command>xbacklight +10</command>
-      </action>
-    </keybind>
-    <keybind key="XF86MonBrightnessDown">
-      <action name="Execute">
-        <command>xbacklight -10</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioRaiseVolume">
-      <action name="Execute">
-        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5% ; volume status"</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioLowerVolume">
-      <action name="Execute">
-        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5% ; volume status"</command>
-      </action>
-    </keybind>
-    <keybind key="XF86AudioMute">
-      <action name="Execute">
-        <command>sh -c "pactl set-sink-mute 0 true ; pactl set-sink-volume 0 0% ; volume status"</command>
-      </action>
-    </keybind>
-    <keybind key="W-space">
-      <action name="Execute">
-        <name>rofi</name>
-        <!-- <command>rofi -modi "run,clipboard:greenclip print,window,ssh" -show run -font "Roboto 12" -terminal urxvt</command> -->
-        <command>rofi -run-command "zsh -c -i '{cmd}'" -show drun</command>
-      </action>
-    </keybind>
-    <keybind key="W-p">
-      <action name="Execute">
-        <name>Pass</name>
-        <command>zsh -c -i 'rofi-pass'</command>
-      </action>
-    </keybind>
-    <keybind key="W-Return">
-      <action name="Execute">
-        <name>Urxvt</name>
-        <command>urxvt</command>
-      </action>
-    </keybind>
-    <keybind key="W-w">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Firefox</name>
-        </startupnotify>
-        <command>firefox-esr</command>
-      </action>
-    </keybind>
-    <keybind key="W-f">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>PCManFM</name>
-        </startupnotify>
-        <command>pcmanfm</command>
-      </action>
-    </keybind>
-    <keybind key="C-S-q">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>xkill</name>
-        </startupnotify>
-        <command>xkill</command>
-      </action>
-    </keybind>
-    <keybind key="W-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>pavucontrol</name>
-        </startupnotify>
-        <command>pavucontrol</command>
       </action>
     </keybind>
     <keybind key="C-A-Right">
@@ -318,37 +325,99 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="W-F1">
-      <action name="GoToDesktop">
-        <to>1</to>
+    <!-- Keybindings for apps -->
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight +10</command>
       </action>
     </keybind>
-    <keybind key="W-F2">
-      <action name="GoToDesktop">
-        <to>2</to>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -10</command>
       </action>
     </keybind>
-    <keybind key="W-F3">
-      <action name="GoToDesktop">
-        <to>3</to>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 +5% ; volume status"</command>
       </action>
     </keybind>
-    <keybind key="W-F4">
-      <action name="GoToDesktop">
-        <to>4</to>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>sh -c "pactl set-sink-mute 0 false ; pactl set-sink-volume 0 -5% ; volume status"</command>
       </action>
     </keybind>
-    <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>sh -c "pactl set-sink-mute 0 true ; pactl set-sink-volume 0 0% ; volume status"</command>
+      </action>
     </keybind>
-    <!-- Keybindings for windows -->
-    <keybind key="A-F4">
-      <action name="Close"/>
+    <keybind key="W-space">
+      <action name="Execute">
+        <name>rofi</name>
+        <command>rofi -run-command "zsh -c -i '{cmd}'" -show drun</command>
+      </action>
     </keybind>
-    <keybind key="A-Escape">
-      <action name="Lower"/>
-      <action name="FocusToBottom"/>
-      <action name="Unfocus"/>
+    <keybind key="W-p">
+      <action name="Execute">
+        <name>Pass</name>
+        <command>zsh -c -i 'rofi-pass'</command>
+      </action>
+    </keybind>
+    <keybind key="W-Return">
+      <action name="Execute">
+        <name>Urxvt</name>
+        <command>urxvt -e /usr/bin/zsh -c 'screenfetch;/usr/bin/zsh -i'</command>
+      </action>
+    </keybind>
+    <keybind key="W-w">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>Firefox</name>
+        </startupnotify>
+        <command>firefox-esr</command>
+      </action>
+    </keybind>
+    <keybind key="W-f">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>PCManFM</name>
+        </startupnotify>
+        <command>pcmanfm</command>
+      </action>
+    </keybind>
+    <keybind key="W-x">
+      <startupnotify>
+        <enabled>false</enabled>
+        <name>Logout</name>
+      </startupnotify>
+      <action name="Execute">
+        <command>obsession-logout</command>
+      </action>
+    </keybind>
+    <keybind key="C-S-q">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>xkill</name>
+        </startupnotify>
+        <command>xkill</command>
+      </action>
+    </keybind>
+    <keybind key="W-a">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>pavucontrol</name>
+        </startupnotify>
+        <command>pavucontrol</command>
+      </action>
+    </keybind>
+    <keybind key="A-XF86Eject">
+      <action name="Execute">
+        <command>scrot -s ~/Imágenes/screenshots/%b%d-%H%M%S.png</command>
+      </action>
     </keybind>
     <keybind key="A-space">
       <action name="ShowMenu">
@@ -360,25 +429,21 @@
         <menu>root-menu</menu>
       </action>
     </keybind>
-    <!-- Take a screenshot of the current window with scrot when Alt+Print are pressed -->
-    <keybind key="A-XF86Eject">
+    <keybind key="XF86Eject">
       <action name="Execute">
-        <command>scrot -s ~/Imágenes/screenshots/%b%d-%H%M%S.png</command>
+        <command>scrot ~/Imágenes/screenshots/%b%d-%H%M%S.png</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="A-Tab">
-      <action name="Execute">
-        <name>window switcher</name>
-        <command>rofi -modi "run,clipboard:greenclip print,window,ssh" -show window</command>
-      </action>
-      <!-- <action name="NextWindow">
+      <action name="NextWindow">
+        <allDesktops>yes</allDesktops>
         <finalactions>
           <action name="Focus"/>
           <action name="Raise"/>
           <action name="Unshade"/>
         </finalactions>
-      </action> -->
+      </action>
     </keybind>
     <keybind key="A-S-Tab">
       <action name="PreviousWindow">
@@ -398,33 +463,6 @@
           <action name="Raise"/>
           <action name="Unshade"/>
         </finalactions>
-      </action>
-    </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
-      <action name="DirectionalCycleWindows">
-        <direction>right</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="DirectionalCycleWindows">
-        <direction>left</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-      </action>
-    </keybind>
-    <!-- Launch scrot when Print is pressed -->
-    <keybind key="XF86Eject">
-      <action name="Execute">
-        <command>scrot ~/Imágenes/screenshots/%b%d-%H%M%S.png</command>
       </action>
     </keybind>
   </keyboard>
@@ -796,6 +834,7 @@
     </application>
     <application name="urxvt" class="URxvt">
       <desktop>2</desktop>
+      <!-- <decor>no</decor> -->
       <!-- <maximized>true</maximized> -->
     </application>
     <application name="telegram-desktop" class="TelegramDesktop">

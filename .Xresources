@@ -17,8 +17,7 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-!rofi.modi:	run,clipboard:greenclip print,vscode:rofi-vscode,window,ssh
-rofi.modi:	drun,clipboard:greenclip print,run,window,ssh
+rofi.modi:	drun,clipboard:greenclip print,run,ssh
 rofi.terminal:             qterminal
 rofi.ssh-client:           ssh
 rofi.ssh-command:          {terminal} -e {ssh-client} {host}
