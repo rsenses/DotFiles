@@ -155,10 +155,10 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>0</top>
-    <bottom>0</bottom>
-    <left>0</left>
-    <right>0</right>
+    <top>37</top>
+    <bottom>5</bottom>
+    <left>5</left>
+    <right>5</right>
   </margins>
   <dock>
     <position>TopLeft</position>
@@ -182,7 +182,7 @@
     <chainQuitKey>C-g</chainQuitKey>
     <!-- Keybindings for Tilling -->
     <keybind key="W-Right">
-      <action name="Unmaximize" />
+      <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>-0</x>
         <y>0</y>
@@ -191,7 +191,7 @@
       </action>
     </keybind>
     <keybind key="W-Left">
-      <action name="Unmaximize" />
+      <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -200,7 +200,7 @@
       </action>
     </keybind>
     <keybind key="W-Up">
-      <action name="Unmaximize" />
+      <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>0</x>
         <y>0</y>
@@ -209,7 +209,7 @@
       </action>
     </keybind>
     <keybind key="W-Down">
-      <action name="Unmaximize" />
+      <action name="Unmaximize"/>
       <action name="MoveResizeTo">
         <x>0</x>
         <y>-0</y>
@@ -222,6 +222,9 @@
     </keybind>
     <keybind key="W-j">
       <action name="ToggleShowDesktop"/>
+    </keybind>
+    <keybind key="C-q">
+      <action name="Close"/>
     </keybind>
     <keybind key="W-q">
       <action name="Close"/>

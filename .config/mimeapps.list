@@ -1,0 +1,17 @@
+[Added Associations]
+application/vnd.debian.binary-package=gnome-software-local-file.desktop;
+application/x-php=com.visualstudio.code.oss.desktop;
+application/xml=com.visualstudio.code.oss.desktop;code.desktop;
+application/octet-stream=com.visualstudio.code.oss.desktop;
+image/jpeg=lximage-qt.desktop;feh.desktop;
+application/pdf=org.gnome.Evince.desktop;
+image/png=feh.desktop;
+
+[Default Applications]
+application/x-php=com.visualstudio.code.oss.desktop
+application/lrf=calibre-lrfviewer.desktop
+application/xml=com.visualstudio.code.oss.desktop
+text/plain=vim.desktop;
+image/jpeg=feh.desktop
+application/pdf=org.gnome.Evince.desktop
+image/png=feh.desktop
