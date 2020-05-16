@@ -10,14 +10,8 @@ xdg-user-dirs-update &
 ## Panel tint2
 tint2 -c ~/.config/tint2/triste/triste-violet.tint2rc &
 
-## Greencli daemon para rofi clipboard manager
-greenclip daemon &
-
 ## Wallpaper con nitrogen
 feh --bg-scale ~/Imágenes/Wallpapers/degrade.png
-
-## Some of my apps don't respect fontconfig, I'm using xsettingsd to fix it :)
-#xsettingsd &
 
 ## Start powersettings
 #/usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
@@ -32,14 +26,5 @@ dunst &
 ## Bluetooth system tray
 #(sleep 3; blueberry-tray) &
 
-## Volume control for systray
-#(sleep 2; volumeicon) &
-
-## Esto parece ser que inicia pulseaudio
-# start-pulseaudio-x11 &
-
 ## Esto parece que inicia la configuración de imprsoras
 # system-config-printer-applet &
-
-## AT SPI D-Bus Bus AT SPI stands for Assistive Technology Service Provider Interface, a framework to integrate accessibility functions in applications. This command will create a new DBus for AT SPI specific functions
-# /usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
