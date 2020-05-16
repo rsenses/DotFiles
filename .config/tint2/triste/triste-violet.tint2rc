@@ -122,10 +122,36 @@ border_color_hover = #ff5555 100
 background_color_pressed = #ff5555 100
 border_color_pressed = #ff5555 100
 
+# Background 10: CPU
+rounded = 0
+border_width = 0
+border_sides = TBLR
+border_content_tint_weight = 0
+background_content_tint_weight = 0
+background_color = #6272a4 100
+border_color = #6272a4 100
+background_color_hover = #6272a4 100
+border_color_hover = #6272a4 100
+background_color_pressed = #6272a4 100
+border_color_pressed = #6272a4 100
+
+# Background 11: RAM
+rounded = 0
+border_width = 0
+border_sides = TBLR
+border_content_tint_weight = 0
+background_content_tint_weight = 0
+background_color = #ffb86c 100
+border_color = #ffb86c 100
+background_color_hover = #ffb86c 100
+border_color_hover = #ffb86c 100
+background_color_pressed = #ffb86c 100
+border_color_pressed = #ffb86c 100
+
 #-------------------------------------
 # Panel
-panel_items = LTSEEB
-panel_size = 100% 30
+panel_items = LTSEEEEB
+panel_size = 100% 28
 panel_margin = 0 0
 panel_padding = 0 0 0
 panel_background_id = 3
@@ -162,7 +188,7 @@ taskbar_always_show_all_desktop_tasks = 1
 taskbar_name_padding = 4 2
 taskbar_name_background_id = 7
 taskbar_name_active_background_id = 6
-taskbar_name_font = Roboto 8
+taskbar_name_font = Roboto 9
 taskbar_name_font_color = #f8f8f2 63
 taskbar_name_active_font_color = #282a36 100
 taskbar_distribute_size = 1
@@ -177,7 +203,7 @@ task_centered = 0
 urgent_nb_of_blink = 20
 task_maximum_size = 30 30
 task_padding = 8 2 2
-task_font = Roboto 8
+task_font = Roboto 9
 task_tooltip = 1
 task_thumbnail = 0
 task_thumbnail_size = 210
@@ -244,8 +270,8 @@ battery_hide = never
 battery_low_status = 10
 battery_low_cmd = notify-send "battery low" -u critical
 battery_full_cmd = 
-bat1_font = Roboto 8
-bat2_font = Roboto 8
+bat1_font = Roboto 9
+bat2_font = Roboto 9
 battery_font_color = #f8f8f2 100
 bat1_format = %p
 bat2_format = 
@@ -286,7 +312,7 @@ execp_dwheel_command =
 execp_font = Roboto 9
 execp_font_color = #f8f8f2 100
 execp_padding = 4 0
-execp_background_id = 4
+execp_background_id = 10
 execp_centered = 0
 execp_icon_w = 0
 execp_icon_h = 0
@@ -308,7 +334,51 @@ execp_dwheel_command =
 execp_font = Roboto 9
 execp_font_color = #f8f8f2 100
 execp_padding = 4 0
+execp_background_id = 4
+execp_centered = 0
+execp_icon_w = 0
+execp_icon_h = 0
+
+#-------------------------------------
+# Executor 3
+execp = new
+execp_command = usedcpu
+execp_interval = 30
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Roboto 9
+execp_font_color = #f8f8f2 100
+execp_padding = 4 0
 execp_background_id = 8
+execp_centered = 0
+execp_icon_w = 0
+execp_icon_h = 0
+
+#-------------------------------------
+# Executor 4
+execp = new
+execp_command = usedram
+execp_interval = 30
+execp_has_icon = 0
+execp_cache_icon = 1
+execp_continuous = 0
+execp_markup = 1
+execp_lclick_command = 
+execp_rclick_command = 
+execp_mclick_command = 
+execp_uwheel_command = 
+execp_dwheel_command = 
+execp_font = Roboto 9
+execp_font_color = #f8f8f2 100
+execp_padding = 4 0
+execp_background_id = 11
 execp_centered = 0
 execp_icon_w = 0
 execp_icon_h = 0

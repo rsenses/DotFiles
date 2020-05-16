@@ -8,6 +8,7 @@ export QT_QPA_PLATFORMTHEME=gtk2
 
 # Si la pongo en .profile no funcionan en tint2
 # Make ~/.executor folder executable
-export PATH="${PATH}:$HOME/.executor"
+export PATH="${PATH}:$HOME/.local/bin"
+export PATH="${PATH}:/var/lib/flatpak/exports/bin"
 
 exec openbox-session

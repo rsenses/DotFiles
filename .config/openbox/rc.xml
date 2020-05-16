@@ -155,7 +155,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>37</top>
+    <top>33</top>
     <bottom>5</bottom>
     <left>5</left>
     <right>5</right>
@@ -283,49 +283,41 @@
     <keybind key="C-A-Left">
       <action name="GoToDesktop">
         <to>left</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-A-Right">
       <action name="GoToDesktop">
         <to>right</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-A-Up">
       <action name="GoToDesktop">
         <to>up</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
     <keybind key="C-A-Down">
       <action name="GoToDesktop">
         <to>down</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="C-S-A-Left">
       <action name="SendToDesktop">
         <to>left</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="C-S-A-Right">
       <action name="SendToDesktop">
         <to>right</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Up">
+    <keybind key="C-S-A-Up">
       <action name="SendToDesktop">
         <to>up</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Down">
+    <keybind key="C-S-A-Down">
       <action name="SendToDesktop">
         <to>down</to>
-        <wrap>no</wrap>
       </action>
     </keybind>
     <!-- Keybindings for apps -->
@@ -356,14 +348,20 @@
     </keybind>
     <keybind key="W-space">
       <action name="Execute">
-        <name>rofi</name>
-        <command>rofi -run-command "zsh -c -i '{cmd}'" -show drun</command>
+        <name>dmenu</name>
+        <command>dmenu_run -i -fn 'Roboto-10' -nb '#282a36' -nf '#f8f8f2' -sb '#ff5555' -h 28</command>
       </action>
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
-        <name>Pass</name>
-        <command>zsh -c -i 'rofi-pass'</command>
+        <name>dmenu pass</name>
+        <command>passmenu -i -fn 'Roboto-10' -nb '#282a36' -nf '#f8f8f2' -sb '#ff5555' -h 28</command>
+      </action>
+    </keybind>
+    <keybind key="W-A-v">
+      <action name="Execute">
+        <name>dmenu clipboard</name>
+        <command>clipmenu -i -fn 'Roboto-10' -nb '#282a36' -nf '#f8f8f2' -sb '#ff5555' -h 28</command>
       </action>
     </keybind>
     <keybind key="W-Return">
@@ -728,16 +726,6 @@
       </mousebind>
     </context>
     <context name="Desktop">
-      <mousebind button="Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
       <mousebind button="A-Up" action="Click">
         <action name="GoToDesktop">
           <to>previous</to>

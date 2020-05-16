@@ -31,6 +31,3 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Elige la carpeta de scrot
 alias scrot='scrot ~/Imágenes/screenshots/%b%d-%H%M%S.png'
-
-# abre feh siempre en modo galería
-alias feh='feh --start-at'

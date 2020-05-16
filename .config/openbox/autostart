@@ -14,7 +14,7 @@ tint2 -c ~/.config/tint2/triste/triste-violet.tint2rc &
 greenclip daemon &
 
 ## Wallpaper con nitrogen
-feh --bg-scale ~/Imágenes/Wallpapers/99790.jpg
+feh --bg-scale ~/Imágenes/Wallpapers/degrade.png
 
 ## Some of my apps don't respect fontconfig, I'm using xsettingsd to fix it :)
 #xsettingsd &

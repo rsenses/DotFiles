@@ -16,20 +16,6 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
-
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/.cargo/bin" ] ; then
-    export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
 if [ -d "$HOME/.config/composer/vendor/bin" ] ; then
     export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 fi
@@ -39,4 +25,6 @@ if [ -d "/var/lib/flatpak/exports/bin" ] ; then
 fi
 
 # Path para apps cargo
-export PATH="$HOME/.cargo/bin:$PATH"
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi

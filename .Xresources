@@ -17,12 +17,9 @@
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
 
-rofi.modi:	drun,clipboard:greenclip print,run
-rofi.terminal:             urxvt
-rofi.run-command:          {cmd}
-rofi.run-shell-command:    {terminal} -e {cmd}
-rofi.disable-history:      false
-rofi.levenshtein-sort:     false
-rofi.case-sensitive:       false
-rofi.auto-select:          false
-rofi.parse-hosts:          false
+dmenu.font:Roboto-10
+dmenu.foreground:#F8F8F2
+dmenu.background:#282A36
+dmenu.selbackground:#ff5555
+dmenu.selforeground:#f8f8f2
+dmenu.lineheight:28
