@@ -8,5 +8,5 @@ done
 device=$(echo -e "${devices}" | dmenu -p Umount $DMENUSETTINGS)
 
 if [ -n "$device" ]; then
-    pumount $device
+    umount $device
 fi

@@ -30,5 +30,5 @@ done
 device=$(echo -e "${devices}" | dmenu -p Mount $DMENUSETTINGS)
 
 if [ -n "$device" ]; then
-    pmount $device
+    mount $device
 fi
