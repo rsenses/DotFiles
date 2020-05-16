@@ -6,12 +6,15 @@ application/octet-stream=com.visualstudio.code.oss.desktop;
 image/jpeg=lximage-qt.desktop;feh.desktop;
 application/pdf=org.gnome.Evince.desktop;
 image/png=feh.desktop;
+text/plain=code.desktop;
+text/html=code.desktop;
 
 [Default Applications]
 application/x-php=com.visualstudio.code.oss.desktop
 application/lrf=calibre-lrfviewer.desktop
 application/xml=com.visualstudio.code.oss.desktop
-text/plain=vim.desktop;
+text/plain=code.desktop
 image/jpeg=feh.desktop
 application/pdf=org.gnome.Evince.desktop
 image/png=feh.desktop
+text/html=code.desktop

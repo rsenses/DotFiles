@@ -20,6 +20,9 @@ xfce4-power-manager &
 ## I love my wife! Upss typo, I mean wifi
 connman-gtk &
 
+# Bluetooth Applet
+blueman-applet &
+
 ## Dunst notifications
 dunst &
 
