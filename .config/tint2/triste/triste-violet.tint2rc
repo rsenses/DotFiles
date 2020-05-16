@@ -273,7 +273,7 @@ battery_full_cmd =
 bat1_font = Roboto 9
 bat2_font = Roboto 9
 battery_font_color = #f8f8f2 100
-bat1_format = %p
+bat1_format =  %p
 bat2_format = 
 battery_padding = 4 4
 battery_background_id = 9
@@ -298,7 +298,7 @@ separator_padding = 0 6
 #-------------------------------------
 # Executor 1
 execp = new
-execp_command = weather
+execp_command = weather -i
 execp_interval = 1800
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -320,7 +320,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 2
 execp = new
-execp_command = clock
+execp_command = clock -i
 execp_interval = 30
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -342,7 +342,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 3
 execp = new
-execp_command = usedcpu
+execp_command = usedcpu -i
 execp_interval = 30
 execp_has_icon = 0
 execp_cache_icon = 1
@@ -364,7 +364,7 @@ execp_icon_h = 0
 #-------------------------------------
 # Executor 4
 execp = new
-execp_command = usedram
+execp_command = usedram -i
 execp_interval = 30
 execp_has_icon = 0
 execp_cache_icon = 1
