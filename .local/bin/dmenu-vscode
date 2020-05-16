@@ -1,24 +1,9 @@
 #!/usr/bin/bash
-getprop() {
-    while IFS=: read -r prop value; do
-        if [ $1 == $prop ]
-        then
-            echo "-$2 $value" | xargs
-        fi
-    done < <(xrdb -q)
-}
-
-fn=$(getprop "dmenu.font" "fn")
-nb=$(getprop "dmenu.background" "nb")
-nf=$(getprop "dmenu.foreground" "nf")
-sb=$(getprop "dmenu.selbackground" "sb")
-sf=$(getprop "dmenu.selforeground" "sf")
-h=$(getprop "dmenu.lineheight" "h")
 
 # Path to the projects.json file (vscode alefragnani project manager)
 SRC=~/.config/Code/User/globalStorage/alefragnani.project-manager/projects.json
 
-prj=$(jq -r "sort_by(.name) | .[].name" < $SRC | dmenu -p "Projects" -i $fn $nb $nf $sb $h "$@")
+prj=$(jq -r "sort_by(.name) | .[].name" < $SRC | dmenu -p Projects $DMENUSETTINGS "$@")
 
 # If there was a selection, find its path from the src file and launch vscode.
 if [ -n "$prj" ]; then
