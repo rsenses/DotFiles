@@ -23,3 +23,8 @@ dmenu.background:#282A36
 dmenu.selbackground:#ff5555
 dmenu.selforeground:#f8f8f2
 dmenu.lineheight:28
+
+/* fonts */
+URxvt.font:         xft:Hack-Regular:pixelsize=14,xft:FontAwesome
+URxvt.boldFont:     xft:Hack-Bold:pixelsize=14:weight=bold,xft:FontAwesome
+URxvt.italicFont:   xft:Hack-RegularOblique:pixelsize=14:slant=italic,xft:FontAwesome
