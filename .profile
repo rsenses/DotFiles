@@ -29,6 +29,12 @@ if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# Path para apps cargo
+if [ -d "/snap/bin" ] ; then
+    export PATH="/snap/bin:$PATH"
+fi
+
+
 # Modifica CAPS_LOCK para que sirva de CTRL y ESC
 setxkbmap -option ctrl:nocaps
 xcape -e 'Control_L=Escape'

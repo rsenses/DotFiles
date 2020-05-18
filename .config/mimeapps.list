@@ -8,6 +8,7 @@ application/pdf=org.gnome.Evince.desktop;
 image/png=feh.desktop;
 text/plain=code.desktop;
 text/html=code.desktop;
+video/x-msvideo=mpv.desktop;io.github.GnomeMpv.desktop;
 
 [Default Applications]
 application/x-php=com.visualstudio.code.oss.desktop
@@ -18,3 +19,4 @@ image/jpeg=feh.desktop
 application/pdf=org.gnome.Evince.desktop
 image/png=feh.desktop
 text/html=code.desktop
+video/x-msvideo=io.github.GnomeMpv.desktop
