@@ -8,7 +8,7 @@ compton &
 xdg-user-dirs-update &
 
 ## Panel tint2
-tint2 -c ~/.config/tint2/triste/triste-violet.tint2rc &
+tint2-session &
 
 ## Wallpaper con nitrogen
 feh --bg-scale ~/Imágenes/Wallpapers/degrade.png
