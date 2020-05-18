@@ -1,5 +1,6 @@
 ## Para autentificar apps
-lxpolkit &
+# lxpolkit &
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
 
 ## Inicia compton
 compton &
@@ -8,7 +9,7 @@ compton &
 xdg-user-dirs-update &
 
 ## Panel tint2
-tint2-session &
+tint2 &
 
 ## Wallpaper con nitrogen
 feh --bg-scale ~/Imágenes/Wallpapers/degrade.png
