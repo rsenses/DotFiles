@@ -1,0 +1,4 @@
+# /etc/apt/apt.conf.d/80-recommends
+# Para no instalar ni paquetes sugeridos ni recomendados
+APT::Install-Recommends "false";
+APT::Install-Suggests "false";

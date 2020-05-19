@@ -1,0 +1,1 @@
+BOOT_IMAGE=/boot/vmlinuz-4.19.0-9-amd64 root=UUID=b222af4d-c66e-4314-bca1-d8da507db25f ro quiet splash intel_pstate=enable resume=UUID=58647d64-6825-4777-b19b-58cdc676bc92
