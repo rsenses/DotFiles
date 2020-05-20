@@ -8,6 +8,11 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Sirve para iniciar X desde tty
+#if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+#    exec startx
+#fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -28,12 +33,6 @@ fi
 if [ -d "$HOME/.cargo/bin" ] ; then
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
-
-# Path para apps cargo
-if [ -d "/snap/bin" ] ; then
-    export PATH="/snap/bin:$PATH"
-fi
-
 
 # Modifica CAPS_LOCK para que sirva de CTRL y ESC
 setxkbmap -option ctrl:nocaps
