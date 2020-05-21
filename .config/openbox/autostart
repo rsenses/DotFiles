@@ -23,4 +23,4 @@ dunst &
 connman-gtk &
 
 # Bluetooth Applet
-blueman-applet &
+#blueman-applet &

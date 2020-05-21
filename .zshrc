@@ -249,7 +249,3 @@ bindkey -M vicmd 'j' history-substring-search-down
 if [[ ${HOME}/.bash_aliases ]]; then
     source $HOME/.bash_aliases
 fi
-
-if [[ ${HOME}/.profile ]]; then
-    source $HOME/.profile
-fi
