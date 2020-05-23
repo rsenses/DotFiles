@@ -1,45 +1,32 @@
-!! Colorscheme
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
 
-! special
-! *.foreground: #93a1a1
-! *.background: #141c21
-! *.cursorColor: #afbfbf
+dmenu.font:Roboto-10
+dmenu.foreground:#F8F8F2
+dmenu.background:#282A36
+dmenu.selbackground:#ff5555
+dmenu.selforeground:#f8f8f2
+dmenu.lineheight:28
 
-! black
-! *.color0: #263640
-! *.color8: #4a697d
-
-!! red
-!*.color1: #d12f2c
-!*.color9: #fa3935
-!
-!! green
-!*.color2: #819400
-!*.color10: #a4bd00
-!
-!! yellow
-!*.color3: #b08500
-!*.color11: #d9a400
-!
-!! blue
-!*.color4: #2587cc
-!*.color12: #2ca2f5
-!
-!! magenta
-!*.color5: #696ebf
-!*.color13: #8086e8
-!
-!! cyan
-!*.color6: #289c93
-!*.color14: #33c5ba
-!
-!! white
-!*.color7: #bfbaac
-!*.color15: #fdf6e3
-!
 !! URxvt Appearance
 !! Fonts
-URxvt.allow_bold:           false
 URxvt*font: xft:Hack:pixelsize=14:antialias=true
 URxvt*boldFont: xft:Hack:pixelsize=14:bold:antialias=true
 URxvt.letterSpace: -1
@@ -64,19 +51,17 @@ URxvt.keysym.Control-Right: \033[1;5C
 URxvt.keysym.Control-Left: \033[1;5D
 
 !! Copy Paste & Other Extensions
-URxvt.perl-ext-common: default,matcher
-URxvt.matcher.button: 1
-URxvt.url-launcher: firefox-esr
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.urlLauncher: firefox
 URxvt.underlineURLs: true
-! Copy/Paste, same keys as gnome-terminal
-! https://stackoverflow.com/questions/39884093
-! Disable ISO 14755 unicode input so we can use Ctrl-Shift bindings
-URxvt.iso14755:        false
-URxvt.iso14755_52:     false
-! Bind Ctrl-Shift-c & Ctrl-Shift-v to copy and paste
-! I dont know why, but I needed to use hex keysym values to get it to work
-! URxvt.keysym.C-C: perl:clipboard:copy
-! URxvt.keysym.C-V: perl:clipboard:paste
-! URxvt.keysym.C-A-V: perl:clipboard:paste_escaped
+URxvt.urlButton: 1
 
 Xcursor.theme: Adwaita

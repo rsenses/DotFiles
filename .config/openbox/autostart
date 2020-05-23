@@ -24,3 +24,6 @@ connman-gtk &
 
 # Bluetooth Applet
 #blueman-applet &
+
+# Start Urxvt daemon to save memory
+urxvtd -q &

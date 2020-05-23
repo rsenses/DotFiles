@@ -155,7 +155,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>33</top>
+    <top>28</top>
     <bottom>5</bottom>
     <left>5</left>
     <right>5</right>
@@ -200,27 +200,9 @@
       </action>
     </keybind>
     <keybind key="W-Up">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="Unmaximize"/>
-      <action name="MoveResizeTo">
-        <x>0</x>
-        <y>-0</y>
-        <width>100%</width>
-        <height>50%</height>
-      </action>
-    </keybind>
-    <keybind key="W-k">
       <action name="ToggleMaximize"/>
     </keybind>
-    <keybind key="W-j">
+    <keybind key="W-Down">
       <action name="ToggleShowDesktop"/>
     </keybind>
     <keybind key="C-q">
@@ -349,25 +331,25 @@
     <keybind key="W-space">
       <action name="Execute">
         <name>dmenu</name>
-        <command>dmenu_run -i -fn 'Roboto-10' -nb '#282a36' -nf '#f8f8f2' -sb '#ff5555' -h 28</command>
+        <command>launch</command>
       </action>
     </keybind>
     <keybind key="W-p">
       <action name="Execute">
         <name>dmenu pass</name>
-        <command>passmenu -i -fn 'Roboto-10' -nb '#282a36' -nf '#f8f8f2' -sb '#ff5555' -h 28</command>
+        <command>launch_pass</command>
       </action>
     </keybind>
     <keybind key="W-A-v">
       <action name="Execute">
         <name>dmenu clipboard</name>
-        <command>clipmenu -i -fn 'Roboto-10' -nb '#282a36' -nf '#f8f8f2' -sb '#ff5555' -h 28</command>
+        <command>launch_clipmenu</command>
       </action>
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
         <name>Urxvt</name>
-        <command>urxvt -e /usr/bin/zsh -c 'ufetch;/usr/bin/zsh -i'</command>
+        <command>urxvtc -e /usr/bin/zsh -c 'ufetch;/usr/bin/zsh -i'</command>
       </action>
     </keybind>
     <keybind key="W-w">
@@ -436,6 +418,30 @@
       </action>
     </keybind>
     <!-- Keybindings for window switching -->
+    <keybind key="W-A-Right">
+			<action name="DirectionalCycleWindows">
+				<direction>right</direction>
+				<dialog>no</dialog>
+			</action>
+		</keybind>
+		<keybind key="W-A-Left">
+			<action name="DirectionalCycleWindows">
+				<direction>left</direction>
+				<dialog>no</dialog>
+			</action>
+		</keybind>
+		<keybind key="W-A-Up">
+			<action name="DirectionalCycleWindows">
+				<direction>up</direction>
+				<dialog>no</dialog>
+			</action>
+		</keybind>
+		<keybind key="W-A-Down">
+			<action name="DirectionalCycleWindows">
+				<direction>down</direction>
+				<dialog>no</dialog>
+			</action>
+		</keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
@@ -502,26 +508,6 @@
         <action name="Lower"/>
         <action name="FocusToBottom"/>
         <action name="Unfocus"/>
-      </mousebind>
-      <mousebind button="A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Up" action="Click">
-        <action name="GoToDesktop">
-          <to>previous</to>
-        </action>
-      </mousebind>
-      <mousebind button="C-A-Down" action="Click">
-        <action name="GoToDesktop">
-          <to>next</to>
-        </action>
       </mousebind>
       <mousebind button="A-S-Up" action="Click">
         <action name="SendToDesktop">
@@ -757,11 +743,11 @@
     </context>
     <context name="Root">
       <!-- Menus -->
-      <mousebind button="Middle" action="Press">
-        <action name="ShowMenu">
-          <menu>client-list-combined-menu</menu>
-        </action>
-      </mousebind>
+      <mousebind button="Left" action="DoubleClick">
+				<action name="ShowMenu">
+					<menu>client-list-combined-menu</menu>
+				</action>
+			</mousebind>
       <mousebind button="Right" action="Press">
         <action name="ShowMenu">
           <menu>root-menu</menu>

@@ -17,90 +17,8 @@
 				<execute>pcmanfm</execute>
 			</action>
 		</item>
-		<menu id="root-menu-463717" label="Applications">
-			<item label="VLC">
-				<action name="Execute">
-					<execute>vlc</execute>
-				</action>
-			</item>
-			<item label="Timeshift">
-				<action name="Execute">
-					<execute>timeshift-launcher</execute>
-				</action>
-			</item>
-			<item label="Synaptic">
-				<action name="Execute">
-					<execute>synaptic-pkexec</execute>
-				</action>
-			</item>
-			<item label="Transmission">
-				<action name="Execute">
-					<execute>transmission-gtk</execute>
-				</action>
-			</item>
-			<item label="OnlyOffice">
-				<action name="Execute">
-					<execute>/var/lib/flatpak/exports/bin/org.onlyoffice.desktopeditors</execute>
-				</action>
-			</item>
-			<item label="Postman">
-				<action name="Execute">
-					<execute>/var/lib/flatpak/exports/bin/com.getpostman.Postman</execute>
-				</action>
-			</item>
-			<item label="Spotify">
-				<action name="Execute">
-					<execute>/var/lib/flatpak/exports/bin/com.spotify.Client</execute>
-				</action>
-			</item>
-			<item label="Thunderbird">
-				<action name="Execute">
-					<execute>thunderbird</execute>
-				</action>
-			</item>
-			<item label="Telegram">
-				<action name="Execute">
-					<execute>telegram-desktop</execute>
-				</action>
-			</item>
-			<item label="Discord">
-				<action name="Execute">
-					<execute>/var/lib/flatpak/exports/bin/com.discordapp.Discord</execute>
-				</action>
-			</item>
-			<item label="FileZilla">
-				<action name="Execute">
-					<execute>filezilla</execute>
-				</action>
-			</item>
-			<item label="Visual Studio Code">
-				<action name="Execute">
-					<execute>code</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="root-menu-951945" label="Settings">
-			<item label="Power Manager">
-				<action name="Execute">
-					<execute>xfce4-power-manager-settings</execute>
-				</action>
-			</item>
-			<item label="Appearance">
-				<action name="Execute">
-					<execute>lxappearance</execute>
-				</action>
-			</item>
-			<item label="ObConf">
-				<action name="Execute">
-					<execute>obconf</execute>
-				</action>
-			</item>
-			<item label="ObMenu">
-				<action name="Execute">
-					<execute>obmenu</execute>
-				</action>
-			</item>
-		</menu>
+		<menu execute="openbox-menu lxde-applications.menu" id="apps" label="Applications"/>
+		<menu id="client-list-menu" />
 		<separator/>
 		<item label="Reconfigure">
 			<action name="Reconfigure"/>
@@ -108,9 +26,31 @@
 		<item label="Restart">
 			<action name="Restart"/>
 		</item>
-		<separator/>
-		<item label="Exit">
-			<action name="Exit"/>
-		</item>
+		<separator />
+        <menu id="exit" label="Exit" >
+            <item label="Logout">
+                <action name="Exit" />
+            </item>
+            <item label="Suspend">
+                <action name="Execute">
+                    <execute>systemctl suspend</execute>
+                </action>
+            </item>
+            <item label="Hibernate">
+                <action name="Execute">
+                    <execute>systemctl hibernate</execute>
+                </action>
+            </item>
+            <item label="Reboot">
+                <action name="Execute">
+                    <execute>systemctl reboot</execute>
+                </action>
+            </item>
+            <item label="Shutdown">
+                <action name="Execute">
+                    <execute>systemctl poweroff</execute>
+                </action>
+            </item>
+        </menu>
 	</menu>
 </openbox_menu>
