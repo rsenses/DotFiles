@@ -129,8 +129,8 @@
       <name></name>
       <name></name>
     </names>
-    <!-- <popupTime>875</popupTime> -->
-    <popupTime>0</popupTime>
+    <popupTime>675</popupTime>
+    <!-- <popupTime>0</popupTime> -->
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -419,29 +419,29 @@
     </keybind>
     <!-- Keybindings for window switching -->
     <keybind key="W-A-Right">
-			<action name="DirectionalCycleWindows">
-				<direction>right</direction>
-				<dialog>no</dialog>
-			</action>
-		</keybind>
-		<keybind key="W-A-Left">
-			<action name="DirectionalCycleWindows">
-				<direction>left</direction>
-				<dialog>no</dialog>
-			</action>
-		</keybind>
-		<keybind key="W-A-Up">
-			<action name="DirectionalCycleWindows">
-				<direction>up</direction>
-				<dialog>no</dialog>
-			</action>
-		</keybind>
-		<keybind key="W-A-Down">
-			<action name="DirectionalCycleWindows">
-				<direction>down</direction>
-				<dialog>no</dialog>
-			</action>
-		</keybind>
+      <action name="DirectionalCycleWindows">
+        <direction>right</direction>
+        <dialog>no</dialog>
+      </action>
+    </keybind>
+    <keybind key="W-A-Left">
+      <action name="DirectionalCycleWindows">
+        <direction>left</direction>
+        <dialog>no</dialog>
+      </action>
+    </keybind>
+    <keybind key="W-A-Up">
+      <action name="DirectionalCycleWindows">
+        <direction>up</direction>
+        <dialog>no</dialog>
+      </action>
+    </keybind>
+    <keybind key="W-A-Down">
+      <action name="DirectionalCycleWindows">
+        <direction>down</direction>
+        <dialog>no</dialog>
+      </action>
+    </keybind>
     <keybind key="A-Tab">
       <action name="NextWindow">
         <allDesktops>yes</allDesktops>
@@ -744,10 +744,10 @@
     <context name="Root">
       <!-- Menus -->
       <mousebind button="Left" action="DoubleClick">
-				<action name="ShowMenu">
-					<menu>client-list-combined-menu</menu>
-				</action>
-			</mousebind>
+        <action name="ShowMenu">
+          <menu>client-list-combined-menu</menu>
+        </action>
+      </mousebind>
       <mousebind button="Right" action="Press">
         <action name="ShowMenu">
           <menu>root-menu</menu>

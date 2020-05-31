@@ -5,6 +5,7 @@ export BORWSER='firefox-esr'
 export DMENUSETTINGS='-i -fn Roboto-10 -nb #282a36 -nf #f8f8f2 -sb #ff5555 -h 24'
 # Para que las aplicaciones QT tengan estilos GTK
 export QT_QPA_PLATFORMTHEME=gtk2
+export NO_AT_BRIDGE=1
 
 # Si la pongo en .profile no funcionan en tint2
 # Make ~/.executor folder executable
