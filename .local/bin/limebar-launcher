@@ -1,0 +1,1 @@
+limebar | lemonbar -g 1280x24 -f "Roboto-10" -f "FontAwesome-10" | while read line; do eval "$line"; done &

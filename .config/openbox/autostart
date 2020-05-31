@@ -5,7 +5,8 @@
 xdg-user-dirs-update &
 
 ## Panel tint2
-tint2 &
+#tint2 &
+limebar-launcher &
 
 ## Wallpaper con nitrogen
 feh --bg-scale ~/media/p/wallpapers/degrade.png
@@ -20,7 +21,7 @@ xfce4-power-manager &
 dunst &
 
 ## I love my wife! Upss typo, I mean wifi
-connman-gtk &
+# connman-gtk &
 
 # Bluetooth Applet
 #blueman-applet &

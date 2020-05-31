@@ -201,7 +201,7 @@ task_text = 0
 task_icon = 1
 task_centered = 0
 urgent_nb_of_blink = 20
-task_maximum_size = 30 30
+task_maximum_size = 28 28
 task_padding = 8 2 2
 task_font = Roboto 9
 task_tooltip = 1
@@ -220,8 +220,8 @@ task_iconified_background_id = 0
 mouse_left = toggle_iconify
 mouse_middle = none
 mouse_right = close
-mouse_scroll_up = toggle
-mouse_scroll_down = iconify
+mouse_scroll_up = none
+mouse_scroll_down = none
 
 #-------------------------------------
 # System tray (notification area)

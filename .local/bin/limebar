@@ -1,0 +1,118 @@
+#!/bin/bash
+
+i='' i_fa_battery_4=$i
+i='' i_fa_battery_3=$i
+i='' i_fa_battery_2=$i
+i='' i_fa_battery_1=$i
+i='' i_fa_battery_0=$i
+i='' i_fa_plug=$i
+i='' i_fa_mem=$i
+i='' i_fa_wifi=$i
+i='' i_fa_cpu=$i
+i='' i_fa_cal=$i
+
+#spacer
+space()
+{
+	echo " "
+}
+
+sp_desktops()
+{
+	wmctrl -d | while read dt_number dt_active c3 c4 c5 c6 c7 c8 c9 dt_name; do
+		if [ "$dt_active" = "*" ] ; then
+			printf "%b" "%{B#ff5555}%{F#f8f8f2}%{A:xdotool set_desktop ${dt_number}:}$(space)$(space)${dt_name}$(space)$(space)%{A}"
+		else
+			printf "%b" "%{B#282a36}%{F#f8f8f2}%{A:xdotool set_desktop ${dt_number}:}$(space)$(space)${dt_name}$(space)$(space)%{A}"
+		fi
+	done
+}
+
+curwin()
+{
+    xdotool getactivewindow getwindowname
+}
+
+sp_weather()
+{
+	weather="$(weather-applet -i)"
+    printf "%b" "%{B#282a36}%{F#f8f8f2}%{A:urxvt -hold -e weather:}${weather}$(space)$(space)%{A}"
+}
+
+#Show Network 
+int()
+{
+  host google.com>/dev/null &&
+  printf "%b" "%{B#44475a}%{A:/usr/bin/connman-gtk:}$(space)$(space)" &&
+  printf "%b" "%{F#f8f8f2}" || printf "%b" "%{F#282a36}" &&
+  printf "%b" "${i_fa_wifi}$(space)%{A}"
+}
+
+#Show CPU load
+cpu(){
+  read cpu a b c previdle rest < /proc/stat
+  prevtotal=$((a+b+c+previdle))
+  sleep 0.5
+  read cpu a b c idle rest < /proc/stat
+  total=$((a+b+c+idle))
+  cpu="$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))"
+  printf "%b" "%{B#6272a4}%{F#f8f8f2}%{A:urxvt -e htop:}$(space)$(space)${i_fa_cpu} $cpu%$(space)%{A}"
+}
+
+#Show Ram usage
+mem()
+{
+  mem="$(awk '/^Mem/ {print $3}' <(free -m))"
+  printf "%b" "%{B#bd93f9}%{F#f8f8f2}$(space)$(space)${i_fa_mem} $mem$(space)"
+   
+}
+
+#Show time, date and clickable calendar
+clock() {
+    curtime=`date '+%H:%M'` 
+    curdate=`date '+%a, %d %B'`
+    echo "%{B#ff79c6}%{F#f8f8f2}%{A:gsimplecal:}$(space)$(space)${i_fa_cal} $curdate $curtime$(space)%{A}"
+}
+
+# battery module for status line
+sp_status_battery()
+{
+	ICON_0="$(space)${i_fa_battery_0}"	# empty
+	ICON_1="$(space)${i_fa_battery_1}"	# almost empty
+	ICON_2="$(space)${i_fa_battery_2}"			# half
+	ICON_3="$(space)${i_fa_battery_3}"			# almost full
+	ICON_4="$(space)${i_fa_battery_4}"			# full
+	ICON_C="$(space)${i_fa_plug}"			# charging
+
+	if !  [ -e /sys/class/power_supply/BAT*/ ] ; then
+		exit
+	fi
+
+	battery_cap="$(cat /sys/class/power_supply/BAT*/capacity)"
+	battery_stat="$(cat /sys/class/power_supply/BAT*/status)"
+
+	if [ "$battery_stat" = "Charging" ] ; then
+		icon="$ICON_C"
+		label="$(space)${battery_cap}%"
+	else
+		case $(( ${battery_cap} / 21 )) in
+			0)	icon="$ICON_0" ;;
+			1)	icon="$ICON_1" ;;
+			2)	icon="$ICON_2" ;;
+			3)	icon="$ICON_3" ;;
+			4)	icon="$ICON_4" ;;
+		esac
+		if [ "$battery_cap" -lt 97 ] ; then
+			label="$(space)${battery_cap}%"
+		else
+			label=""
+		fi
+	fi
+	
+	printf "%b" "%{B#ff5555}%{F#f8f8f2}%{A:xfce4-power-manager-settings:}$(space)$icon$(space)$label$(space)%{A}"
+}
+
+while :; do
+    echo "%{B#282a36}%{F#f8f8f2}%{l}$(sp_desktops) $(space) $(curwin) %{r}$(sp_weather) $(int) $(cpu) $(mem) $(clock) $(sp_status_battery)%{B#282a36}%{F#f8f8f2}"
+	sleep 1
+done
