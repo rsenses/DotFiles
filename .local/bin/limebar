@@ -39,13 +39,32 @@ sp_weather()
     printf "%b" "%{B#282a36}%{F#f8f8f2}%{A:urxvt -hold -e weather:}${weather}$(space)$(space)%{A}"
 }
 
-#Show Network 
-int()
+sp_status_wifi()
 {
-  host google.com>/dev/null &&
-  printf "%b" "%{B#44475a}%{A:/usr/bin/connman-gtk:}$(space)$(space)" &&
-  printf "%b" "%{F#f8f8f2}" || printf "%b" "%{F#282a36}" &&
-  printf "%b" "${i_fa_wifi}$(space)%{A}"
+	# ICON="$(space)${i_fa_wifi}$(space)"
+	ICON=""
+
+	# get wireless interface name
+	wifi_int="$(ip link show | awk '/state UP/ {print substr($2, 1, length($2)-1)}')"
+
+	if [ -d /sys/class/net/${wifi_int}/wireless ] && [ "$(cat /sys/class/net/${wifi_int}/operstate)" != 'down' ] ; then
+		wifi_quality=$(awk 'NR==3 {print int($3 * 100 / 70)}' /proc/net/wireless)
+		case $(( $wifi_quality / 20 )) in
+			5|4)	label="████" ;;
+			3)		label="███_" ;;
+			2)		label="██__" ;;
+			1)		label="█___" ;;
+			*)		label="____" ;;
+		esac
+
+		# check if wifi name should be shown
+		wifi_name="$(/sbin/iwgetid -r)"
+		label="${label}$(space)${wifi_name}"
+	else
+		label="no wifi"
+	fi
+	
+	printf "%s" "%{B#44475a}%{F#f8f8f2}%{A:/usr/bin/connman-gtk:}$(space)$(space)$ICON$label$(space)%{A}"
 }
 
 #Show CPU load
@@ -113,6 +132,6 @@ sp_status_battery()
 }
 
 while :; do
-    echo "%{B#282a36}%{F#f8f8f2}%{l}$(sp_desktops) $(space) $(curwin) %{r}$(sp_weather) $(int) $(cpu) $(mem) $(clock) $(sp_status_battery)%{B#282a36}%{F#f8f8f2}"
+    echo "%{B#282a36}%{F#f8f8f2}%{l}$(sp_desktops) $(curwin) %{r}$(sp_weather) $(sp_status_wifi) $(cpu) $(mem) $(clock) $(sp_status_battery)%{B#282a36}%{F#f8f8f2}"
 	sleep 1
 done
