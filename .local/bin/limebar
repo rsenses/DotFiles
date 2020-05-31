@@ -23,7 +23,14 @@ sp_desktops()
 		if [ "$dt_active" = "*" ] ; then
 			printf "%b" "%{B#ff5555}%{F#f8f8f2}%{A:xdotool set_desktop ${dt_number}:}$(space)$(space)${dt_name}$(space)$(space)%{A}"
 		else
-			printf "%b" "%{B#282a36}%{F#f8f8f2}%{A:xdotool set_desktop ${dt_number}:}$(space)$(space)${dt_name}$(space)$(space)%{A}"
+			printf "%b" "%{B#282a36}%{F#f8f8f2}"
+			wmctrl -l | while read l1 dtw_number l3 l4; do
+				if [ "$dt_number" = "$dtw_number" ] ; then
+				 	printf "%b" "%{B#ffb86c}%{F#282a36}"
+					break
+				fi
+			done
+			printf "%b" "%{A:xdotool set_desktop ${dt_number}:}$(space)$(space)${dt_name}$(space)$(space)%{A}"
 		fi
 	done
 }
@@ -132,6 +139,6 @@ sp_status_battery()
 }
 
 while :; do
-    echo "%{B#282a36}%{F#f8f8f2}%{l}$(sp_desktops) $(curwin) %{r}$(sp_weather) $(sp_status_wifi) $(cpu) $(mem) $(clock) $(sp_status_battery)%{B#282a36}%{F#f8f8f2}"
+    echo "%{B#282a36}%{F#f8f8f2}%{l}$(sp_desktops) %{r}$(sp_weather) $(sp_status_wifi) $(cpu) $(mem) $(clock) $(sp_status_battery)%{B#282a36}%{F#f8f8f2}"
 	sleep 1
 done
