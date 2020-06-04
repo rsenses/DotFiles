@@ -1,0 +1,25 @@
+[calendars]
+    #Can contain as many calendars as we want
+    [[personal]]
+    path = ~/.calendar/personal
+    type = calendar
+    priority = 2
+    color = light red
+
+[default]
+#Set calendar used for new events when no one is given
+default_calendar = personal
+#Color dates when containing an event
+highlight_event_days = true
+#Timespan of days whose events are shown in e.g. list
+timedelta = 7d
+
+#Set printing of dates
+[locale]
+local_timezone= Europe/Berlin
+default_timezone= Europe/Berlin
+timeformat = %H:%M
+dateformat = %m/%d/%Y
+longdateformat = %m/%d/%Y
+datetimeformat = %m/%d/%Y %H:%M
+longdatetimeformat = %m/%d/%Y %H:%M
