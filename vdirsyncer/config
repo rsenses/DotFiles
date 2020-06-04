@@ -1,0 +1,45 @@
+[general]
+# A folder where vdirsyncer can store some metadata about each pair.
+status_path = "~/.config/vdirsyncer/status/"
+
+[pair my_contacts]
+a = "my_contacts_local"
+b = "my_contacts_remote"
+collections = ["from a", "from b"]
+conflict_resolution = "b wins"
+
+[storage my_contacts_local]
+type = "filesystem"
+path = "~/.contacts/"
+fileext = ".vcf"
+
+[storage my_contacts_remote]
+type = "carddav"
+
+# We can simplify this URL here as well. In theory it shouldn't matter.
+url = "https://rsenses.allsync.com/remote.php/dav/calendars/rsenses/personal/"
+username = "rsenses"
+password.fetch = ["command", "pass", "www/caldav"]
+
+[pair calendar]
+a = "calendar_local"
+b = "calendar_remote"
+collections = ["from a", "from b"]
+metadata = ["displayname"]
+
+[storage calendar_local]
+type = "filesystem"
+path = "~/.calendar"
+fileext = ".ics"
+
+[storage calendar_remote]
+type = "caldav"
+#Can be obtained from nextcloud
+url = "https://rsenses.allsync.com/remote.php/dav/calendars/rsenses/personal/"
+username = "rsenses"
+#Instead of inserting my plaintext password I fetch it using pass
+password.fetch = ["command", "pass", "www/caldav"]
+#SSL certificate fingerprint
+#verify_fingerprint = "40:6A:B6:65:DC:E1:FC:62:48:3B:0F:EA:94:F8:9E:C7:A0:5D:FE:CA"
+#Verify ssl certificate. Set to false if it is self signed and not installed on local machine
+verify = true
