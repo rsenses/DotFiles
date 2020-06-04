@@ -16,6 +16,10 @@ alias cp='cp -i'
 
 alias df='df -h' # human-readable sizes
 
+# Alias para carpetas
+alias md='mkdir -p'
+alias rd='rmdir'
+
 # CD
 alias ..='cd ..'
 alias ...='cd ../..'
