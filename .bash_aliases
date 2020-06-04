@@ -33,5 +33,9 @@ alias t=tmux
 # Alias para repositorio Dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# Alias para khal
+alias calsync='vdirsyncer sync'
+alias cal='ikhal'
+
 # Elige la carpeta de scrot
 alias scrot='scrot ~/Imágenes/screenshots/%b%d-%H%M%S.png'
