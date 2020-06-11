@@ -11,8 +11,13 @@
 # History
 #
 
+HISTSIZE=10000000
+SAVEHIST=10000000
+
 # Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
+# share command history data
+setopt SHARE_HISTORY
 
 #
 # Input/output
@@ -224,6 +229,13 @@ source ${ZIM_HOME}/init.zsh
 # ------------------------------
 # Post-init module configuration
 # ------------------------------
+
+
+#
+# load zcalc
+#
+
+autoload -Uz zcalc
 
 #
 # zsh-history-substring-search
