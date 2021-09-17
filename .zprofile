@@ -1,18 +1,13 @@
-# Sirve para iniciar X desde tty
-#if systemctl -q is-active graphical.target && [[ ! $DISPLAY ]]; then
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    exec startx
-fi
+export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:~/.composer/vendor/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin"
+export PATH="$PATH:/usr/local/opt/grep/libexec/gnubin"
+typeset -U PATH
+eval "$(/usr/local/bin/brew shellenv)"
 
-if [ -d "$HOME/.config/composer/vendor/bin" ] ; then
-    export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-fi
-
-# Path para apps cargo
-if [ -d "$HOME/.cargo/bin" ] ; then
-    export PATH="$HOME/.cargo/bin:$PATH"
-fi
-
-# Modifica CAPS_LOCK para que sirva de CTRL y ESC
-setxkbmap -option ctrl:nocaps
-xcape -e 'Control_L=Escape'
+# z beats cd most of the time. `brew install z`
+if which brew > /dev/null; then
+    zpath="$(brew --prefix)/etc/profile.d/z.sh"
+    [ -s $zpath ] && source $zpath
+fi;

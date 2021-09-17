@@ -1,0 +1,8 @@
+export EDITOR=nvim
+export VISUAL="$EDITOR"
+export LANG=es_ES.UTF-8
+export LC_TIME=es_ES.UTF-8
+export TIME_FORMAT=" %-H:%M%p"
+
+DRACULA_DISPLAY_TIME=1
+DRACULA_DISPLAY_CONTEXT=1
